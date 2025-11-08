@@ -15,8 +15,8 @@ const EntourageSection = () => {
         "Henry F. Rabe",
         "Ferdinand V. Garcia",
         "Edwin M. Clavito",
-        "Engr. Ramon Elias F. Ortiz",
-        "Gary C. Perez"
+        "Gary C. Perez",
+        "Engr. Ramon Elias F. Ortiz"
       ],
       women: [
         "Arlene D. Lastimosa",
@@ -25,8 +25,8 @@ const EntourageSection = () => {
         "Grace M. Rabe",
         "Edna M. Clavito",
         "Elenita C. Barreto",
-        "Dra. Ma. Adelaida Decangchon-Ortiz",
-        "Dra. Melanie Katherine A. Lastimosa"
+        "Dra. Melanie Katherine A. Lastimosa",
+        "Dra. Ma. Adelaida Decangchon-Ortiz"
       ]
     },
     secondarySponsors: {
