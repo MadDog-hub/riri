@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const EntourageSection = () => {
   const entourageData = {
     parents: [
-      { label: "Mother of the Groom", names: ["Ma. Nelia Lara A. Lastimosa"] },
+      { label: "Mother of the Groom", names: ["Nella"] },
       { label: "Parents of the Bride", names: ["Roberto F. Rabe", "Editha C. Rabe†"] }
     ],
     principalSponsors: {
@@ -20,7 +20,7 @@ const EntourageSection = () => {
       ],
       women: [
         "Arlene D. Lastimosa",
-        "Jessly M. Lastimosa",
+        "Jesely M. Lastimosa",
         "Viola E. Sorrera",
         "Grace M. Rabe",
         "Edna M. Clavito",
@@ -39,14 +39,17 @@ const EntourageSection = () => {
     },
     bestMan: { name: "Crisanto Angelo A. Lastimosa", role: "Best Man" },
     maidOfHonor: { name: "Bea C. Mateo", role: "Maid of Honor" },
-    groomsmen: [
-      "John Cedrick C. Metro",
-      "Justin Carlos H. Gallardo"
-    ],
-    bridesmaids: [
-      "Mana Cecilia A. Lastimosa",
-      "Pauline Marie L. Lagutan"
-    ],
+    groomsmenAndBridesmaids: {
+      title: "Groomsmen & Bridesmaids",
+      groomsmen: [
+        "John Cedrick C. Metro",
+        "Justin Carlos H. Gallardo"
+      ],
+      bridesmaids: [
+        "Mana Cecilia A. Lastimosa",
+        "Pauline Marie L. Lagutan"
+      ]
+    },
     bearers: [
       { role: "Ring Bearer", names: ["Kim Ivan M. Lastimosa"] },
       { role: "Coin Bearer", names: ["Toby Fennell L. Lagutan"] },
@@ -194,27 +197,25 @@ const EntourageSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.6 }}
         >
-          <div className="grid grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
-            <div className="text-center" data-testid="groomsmen-section">
-              <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
-                Groomsmen
-              </h3>
-              {entourageData.groomsmen.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 text-right" data-testid={`groomsman-${index}`}>
-                  {name}
-                </p>
-              ))}
-            </div>
-            <div className="text-center" data-testid="bridesmaids-section">
-              <h3 className="text-lg md:text-2xl lg:text-3xl font-display font-bold mb-3 md:mb-6 text-primary">
-                Bridesmaids
-              </h3>
-              {entourageData.bridesmaids.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 text-left" data-testid={`bridesmaid-${index}`}>
-                  {name}
-                </p>
-              ))}
-            </div>
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-display font-bold mb-4 md:mb-6 text-primary" data-testid="groomsmen-bridesmaids-title">
+            {entourageData.groomsmenAndBridesmaids.title}
+          </h3>
+          <div className="max-w-4xl mx-auto space-y-1">
+            {entourageData.groomsmenAndBridesmaids.groomsmen.map((groomsmanName, index) => {
+              const bridesmaidName = entourageData.groomsmenAndBridesmaids.bridesmaids[index];
+              if (!groomsmanName && !bridesmaidName) return null;
+              
+              return (
+                <div key={index} className="grid grid-cols-2 gap-4 md:gap-8">
+                  <p className="text-xs md:text-base lg:text-lg font-telma text-foreground text-right" data-testid={`groomsman-${index}`}>
+                    {groomsmanName}
+                  </p>
+                  <p className="text-xs md:text-base lg:text-lg font-telma text-foreground text-left" data-testid={`bridesmaid-${index}`}>
+                    {bridesmaidName}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
 
