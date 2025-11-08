@@ -27,7 +27,6 @@ const EntourageSection = () => {
         "Edna M. Clavito",
         "Elenita C. Barreto",
         "Dra. Melanie Katherine A. Lastimosa",
-        "",
         "Dra. Ma. Adelaida Decangchon-Ortiz"
       ]
     },
