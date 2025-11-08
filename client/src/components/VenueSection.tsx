@@ -4,10 +4,8 @@ import { MapPin, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { LinkPreview } from '@/components/ui/link-preview';
 
-import venuee from "@assets/reception_1762585205392.jpg";
-import venueImage from '@assets/ceremony_1762585062797.png';
-
-import reception from "@assets/reception.jpg";
+import ceremonyImage from '@assets/ceremony_1762597121591.png';
+import receptionImage from "@assets/reception_1762597125960.jpg";
 
 const VenueSection = () => {
   const venues = [
@@ -15,7 +13,7 @@ const VenueSection = () => {
       title: 'Ceremony',
       name: 'Diocesan Shrine and Parish of Our Lady of the Pillar',
       address: 'Imus, Cavite',
-      image: venueImage,
+      image: ceremonyImage,
       mapUrl: 'https://maps.app.goo.gl/6oAPZrvdjmzW3coo6',
       mapEmbed: 'https://www.google.com/maps?q=Diocesan+Shrine+and+Parish+of+Our+Lady+of+the+Pillar+Imus+Cavite&output=embed',
       description: 'Join us at the Diocesan Shrine and Parish of Our Lady of the Pillar for our wedding ceremony. This beautiful church will witness our vows of eternal love.',
@@ -27,7 +25,7 @@ const VenueSection = () => {
       title: 'Reception',
       name: 'Sañez Farm Events Place',
       address: 'Imus, Cavite',
-      image: venuee,
+      image: receptionImage,
       mapUrl: 'https://maps.app.goo.gl/tFztuwErbaRK5BFC9',
       mapEmbed: 'https://www.google.com/maps?q=Sa%C3%B1ez+Farm+Events+Place+Imus+Cavite&output=embed',
       description: 'Join us at Sañez Farm Events Place for our wedding reception. This beautiful venue will host our celebration of love.',
@@ -112,7 +110,7 @@ const VenueSection = () => {
                       {/* Image frame decoration */}
                       <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg" />
                       <img
-                        src={reception}
+                        src={venue.image}
                         alt={venue.name}
                         className="relative w-full h-72 md:h-96 object-cover rounded-lg shadow-xl"
                         loading="lazy"
