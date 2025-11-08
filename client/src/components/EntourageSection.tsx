@@ -15,7 +15,6 @@ const EntourageSection = () => {
         "Sancho Glenn A. Lastimosa",
         "Capt. Igmedio G. Sorrera",
         "Henry F. Rabe",
-        "Engr. Ramon Elias F. Ortiz",
         "Ferdinand V. Garcia",
         "Edwin M. Clavito"
       ],
@@ -26,7 +25,6 @@ const EntourageSection = () => {
         "Jessly M. Lastimosa",
         "Viola E. Sorrera",
         "Grace M. Rabe",
-        "Dra. Ma. Adelaida Decangchon-Ortiz",
         "Edna M. Clavito",
         "Elenita C. Barreto"
       ]
