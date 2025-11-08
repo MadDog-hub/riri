@@ -16,6 +16,7 @@ const EntourageSection = () => {
         "Ferdinand V. Garcia",
         "Edwin M. Clavito",
         "Gary C. Perez",
+        "",
         "Engr. Ramon Elias F. Ortiz"
       ],
       women: [
@@ -26,6 +27,7 @@ const EntourageSection = () => {
         "Edna M. Clavito",
         "Elenita C. Barreto",
         "Dra. Melanie Katherine A. Lastimosa",
+        "",
         "Dra. Ma. Adelaida Decangchon-Ortiz"
       ]
     },
