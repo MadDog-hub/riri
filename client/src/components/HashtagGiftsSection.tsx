@@ -14,16 +14,6 @@ const HashtagGiftsSection = () => {
       transition={{ duration: 1, delay: 0.3 }}
     >
       <div className="max-w-5xl mx-auto px-4 relative z-10">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-        >
-          <h2 className="md:text-5xl font-display font-light text-primary text-[36px]" data-testid="text-gifts-header">Gift Guide</h2>
-        </motion.div>
-
         <motion.div 
           className="relative overflow-hidden rounded-2xl shadow-2xl"
           initial={{ opacity: 0, y: 30 }}
