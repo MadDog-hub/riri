@@ -16,6 +16,7 @@ const Navigation = () => {
     { name: 'Timeline', href: '#timeline' },
     { name: 'Venue', href: '#venue' },
     { name: 'Dress Code', href: '#dresscode' },
+    { name: 'Entourage', href: '#entourage' },
     { name: 'Prenup Photos', href: '#prenup-photos' },
     { name: 'RSVP', href: '#rsvp' }
   ];
