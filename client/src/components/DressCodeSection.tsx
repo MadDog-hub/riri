@@ -161,6 +161,27 @@ const DressCodeSection = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 8.8 }}
                 />
+                
+                {/* Color Palette for Guest Ladies */}
+                <motion.div
+                  className="mt-6 pt-6 border-t border-primary/20"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 9.0 }}
+                >
+                  <p className="text-sm font-semibold text-foreground mb-3">Color Motif (Ladies)</p>
+                  <div className="grid grid-cols-4 gap-2 sm:gap-3">
+                    {dressCodeColors.map((colorItem, index) => (
+                      <div key={index} className="text-center">
+                        <div 
+                          className="w-12 h-12 sm:w-14 sm:h-14 mx-auto rounded-xl border-2 border-border shadow-soft hover:scale-105 transition-transform duration-300"
+                          style={{ backgroundColor: colorItem.color }}
+                        ></div>
+                        <p className="text-xs text-foreground mt-1">{colorItem.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
@@ -183,30 +204,7 @@ const DressCodeSection = () => {
           </div>
         </motion.div>
 
-        {/* Guests Color Palette */}
-        <motion.div 
-          className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 9.1 }}
-        >
-          <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500">
-            <h3 className="text-xl font-body font-medium text-foreground mb-6 text-center">
-              Wedding Guest Color Motif
-            </h3>
-            <div className="grid grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto">
-              {dressCodeColors.map((colorItem, index) => (
-                <div key={index} className="text-center group">
-                  <div 
-                    className="w-16 h-16 sm:w-20 sm:h-20 mx-auto rounded-xl border-2 border-border shadow-soft group-hover:scale-105 transition-transform duration-300"
-                    style={{ backgroundColor: colorItem.color }}
-                  ></div>
-                  <p className="text-xs text-foreground mt-2">{colorItem.name}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
+        
 
         
       </div>
